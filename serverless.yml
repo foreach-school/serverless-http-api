@@ -1,0 +1,27 @@
+service: serverless-http-api
+frameworkVersion: '3'
+
+useDotenv: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  helloWord:
+    handler: ./src/functions/index.handler
+    events:
+      - httpApi:
+          path: /{username}
+          method: get
+  testPost:
+    handler: ./src/functions/testPost.handler
+    events:
+      - httpApi:
+          path: /save
+          method: post

@@ -1,0 +1,32 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "dev": "serverless offline start --httpPort 3000 --lambdaPort 3002 --reloadHandler",
+    "deploy": "serverless deploy",
+    "package": "serverless package"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "http-errors": "^2.0.0",
+    "joi": "^17.11.0",
+    "pg": "^8.11.3",
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.33.0",
+    "sequelize-typescript": "^2.1.5"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.124",
+    "@types/http-errors": "^2.0.2",
+    "@types/joi": "^17.2.3",
+    "@types/node": "^20.8.2",
+    "@types/validator": "^13.11.2",
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^13.2.0",
+    "serverless-plugin-typescript": "^2.1.5",
+    "typescript": "^5.2.2"
+  }
+}
