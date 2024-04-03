@@ -19,6 +19,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: echo ${{ secrets.dev.TST_SECRET }} && npm i
+    - name: Print Secret Value
+      run: echo ${{ secrets.TST_SECRET }}
     - name: Install Plugins and Deploy
       uses: serverless/github-action@v3.2
       with:
